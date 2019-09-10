@@ -6,7 +6,7 @@
 	<string>mas_offset</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>mas_offset(&lt;#code#&gt;);</string>

@@ -6,7 +6,7 @@
 	<string>scrollView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>    UIScrollView *scrollView = [[UIScrollView alloc] init];
@@ -16,22 +16,23 @@
        
     }];
     
-    UIView *containerView = [[UIView alloc] init];
-    [scrollView addSubview:containerView];
-    [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(scrollView);
-        make.width.mas_equalTo(scrollView);
-    }];
-    
-    [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-       
+UIView *containerView = [[UIView alloc] init];
+[scrollView addSubview:containerView];
+[containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.edges.mas_equalTo(scrollView);
+    //上下滚动
+    make.width.mas_equalTo(scrollView);
+}];
+
+[containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+    //设置底部适配
     }];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2D8CEFA4-320B-4907-A45D-E88DE49BFC16</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIScrollView code</string>
+	<string>UIScrollView create code</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

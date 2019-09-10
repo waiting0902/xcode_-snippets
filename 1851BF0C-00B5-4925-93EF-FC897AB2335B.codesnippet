@@ -6,7 +6,7 @@
 	<string>mas_qeualTo</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>mas_equalTo(&lt;#code#&gt;);</string>
