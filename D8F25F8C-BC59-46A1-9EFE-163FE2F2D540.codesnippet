@@ -16,6 +16,8 @@
 	<string>D8F25F8C-BC59-46A1-9EFE-163FE2F2D540</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Dispatch_async_main</string>
 	<key>IDECodeSnippetUserSnippet</key>

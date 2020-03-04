@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>initWithTableNode</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (instancetype)init {
+    _tableNode = [[ASTableNode alloc] init];
+    self = [super initWithNode:_tableNode];
+    if (self) {
+        _tableNode.delegate = self;
+        _tableNode.dataSource = self;
+        _tableNode.style.flexGrow = 1.0;
+        _tableNode.style.flexShrink = 1.0;
+        @weakify(self);
+        [_tableNode onDidLoad:^(__kindof ASTableNode * _Nonnull node) {
+            @strongify(self);
+            if (!self) {return ;}
+            node.view.tableFooterView = [UIView new];
+            node.view.separatorStyle = UITableViewCellSeparatorStyleNone;
+            node.view.mj_header = [MJRefreshStateHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadData)];
+            MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+                @strongify(self);
+                if (!self) {return ;}
+                [self loadListData:NO];
+            }];
+            node.view.mj_footer = footer;
+            node.view.sectionIndexColor = UIColor.blackColor;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW,0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                        [node.view.mj_header beginRefreshing];
+                 });
+        }];
+    }
+    return self;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9DC545F6-7ECD-4DCE-8B7C-66F3390F8436</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>initVCWithTableNode</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -9,11 +9,13 @@
 		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>mas_offset(&lt;#code#&gt;);</string>
+	<string>mas_offset(&lt;#code#&gt;)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>538E6893-195E-4765-9672-DA51430BE886</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Mansony mas_offset</string>
 	<key>IDECodeSnippetUserSnippet</key>
